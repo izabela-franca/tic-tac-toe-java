@@ -2,9 +2,9 @@ package tictactoe.io;
 
 public final class Output {
 
-    private Output() {} //It can be instantiated
+    private Output() {}
 
-    private static void writeNewLine() {
+    public static void writeNewLine() {
         write(null);
     }
 
@@ -16,7 +16,11 @@ public final class Output {
         if (obj == null) {
             System.out.println();
         } else {
-            System.out.println(obj);
+            if (addNewLine) {
+                System.out.println(obj);
+            } else {
+                System.out.print(obj);
+            }
         }
     }
 }
