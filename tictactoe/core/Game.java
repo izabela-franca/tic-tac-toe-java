@@ -20,7 +20,7 @@ public class Game {
 
         Output.write(board);
 
-        if (board.isFull()) {
+        if (board.isFull() && winner == null) {
             Output.write("It's a tie!");
         } else  {
             Output.write(String.format("%s is the winner!", winner));
